@@ -1,5 +1,5 @@
 # Use a slim, stable Python version (avoid "latest" for consistency)
-FROM python:3.9-slim
+FROM public.ecr.aws/docker/library/python:3.9-slim
 
 # Set working directory
 WORKDIR /app
@@ -15,4 +15,5 @@ COPY . .
 EXPOSE 8000
 
 # Run the app
+
 CMD ["python", "app.py"]
