@@ -5,7 +5,7 @@ phases:
     commands:
       - echo "Logging in to Amazon ECR..."
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 679029767004.dkr.ecr.us-east-1.amazonaws.com
-      - IMAGE_REPO=<AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/pipeline-test
+      - IMAGE_REPO=679029767004.dkr.ecr.us-east-1.amazonaws.com/pipeline-test
       - TAG=${CODEBUILD_RESOLVED_SOURCE_VERSION}
   build:
     commands:
